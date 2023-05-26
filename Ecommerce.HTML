@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clothing Store Order</title>
+  <link rel ="stylesheet" href = "style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+<link rel = "stylesheet" link href = "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+  </head>
+
+  <body>
+
+    <div class="header">
+
+    <div class = "container">
+        <div class ="navbar">  
+            <div class="logo">
+                <img src="hartt.jpg" width="125px">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href ="">Home</a></li>
+                    <li><a href ="">Products</a></li>
+                    <li><a href ="">About</a></li>
+                    <li><a href ="">Contact</a></li>
+                    <li><a href ="">Account</a></li>
+                </ul>
+            </nav>
+         </div>
+         <div class = "row">
+            <div class ="col-2">
+                 <h1>Yup Give Yourself<br> A Crisp Style!</h1>
+                 <p>We’ll Help You Experience It!<br> Work Wear Everyday!</p>
+                 <a href ="" class ="btn">Explore Now &#8594;</a>
+            </div>
+            <div class ="col-2">
+                <img src = "carhartt.jpg">
+           </div>
+         </div>
+    </div>
+    </div>
+<!--featured-->
+    <div class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3"><img src = "shirt1.jpg"></div>
+                <div class="col-3"><img src = "shirt2.jpg"></div>
+                <div class="col-3"><img src = "shirt3.jpg"></div>
+                
+            </div>
+        </div>
+       
+    </div>
+    <!--products-->
+    <div class="small-container">
+        <h2>Featured Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="tee1.jpg">
+                <h4>1889 Patched Black Shirt</h4>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <p> &#8369;1300.00</p>
+            </div>
+            <div class="col-4">
+              <img src="tee2.jpg">
+              <h4>Uptown Brown</h4>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+              <p> &#8369;1599.00</p>
+          </div>
+          <div class="col-4">
+            <img src="tee3.jpg">
+            <h4>Spell Out Pink Patched</h4>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+            <p> &#8369;900.00</p>
+        </div>
+        <div class="col-4">
+          <img src="tee4.jpg">
+          <h4>Born hartt Detroit</h4>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+          <p> &#8369;1100.00</p>
+      </div>
+      <div class="col-4">
+        <img src="tee5.jpg">
+        <h4>Stripped Patch</h4>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+        <p> &#8369;1150.00</p>
+    </div>
+    <div class="col-4">
+      <img src="tee6.jpg">
+      <h4>Sleeve Henley Tee</h4>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-o"></i>
+      <p> &#8369;1000.00</p>
+
+  </div>
+        </div>
+    </div>
+    
+    <div class="more">
+    <p class = "message">Stay tuned for more Crisp Shirt!</p>
+    <h1>More Coming Soon.</h1>
+    </div>
+    <br>
+    <br>
+    <hr>
+
+
+    
+
+
+
+<!--add to cart-->
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        th, td {
+          text-align: left;
+          padding: 8px;
+        }
+        
+        th {
+          background-color: #f2f2f2;
+        }
+        
+        #result {
+          margin-top: 20px;
+          font-weight: bold;
+        }
+      </style>
+      <script>
+        function calculateTotal() {
+          var checkboxes = document.querySelectorAll('input[name="amount"]:checked');
+          var totalAmount = 0;
+          checkboxes.forEach(function(checkbox) {
+            totalAmount += parseInt(checkbox.value);
+          });
+    
+          var moneyInput = document.getElementById('money').value;
+          var enteredMoney = parseFloat(moneyInput);
+    
+          var change = enteredMoney - totalAmount;
+    
+          document.getElementById('total').innerHTML = totalAmount.toFixed(2);
+          document.getElementById('change').innerHTML = change.toFixed(2);
+        }
+      </script>
+    </head>
+    <body>
+      <center><h2>Pick & Total Of Your Want Items</h2></center>
+    
+      <table>
+        <tr>
+          <th>Amount</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox" name="amount" value="1300">1889 Black Shirt
+            </label>
+          </td>
+          <td>&#8369;1300.00</td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox" name="amount" value="1599">Uptown Brown
+            </label>
+          </td>
+          <td>&#8369;1599.00</td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox" name="amount" value="900">Spellout Pink
+            </label>
+          </td>
+          <td>&#8369;900.00</td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox" name="amount" value="1100">Born Hartt
+            </label>
+          </td>
+          <td>&#8369;1100.00</td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox" name="amount" value="1150">Stripped Patch
+            </label>
+          </td>
+          <td>&#8369;1150.00</td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <input type="checkbox" name="amount" value="1000">Steve Henley Tee
+            </label>
+          </td>
+          <td>&#8369;1000.00</td>
+        </tr>
+      </table>
+    
+      <label for="money">Enter amount of money:</label>
+      <input type="number" id="money">
+    
+      <button type="button" onclick="calculateTotal()">Calculate</button>
+    
+      <div id="result">
+        <p>Total: &#8369;<span id="total">0.00</span></p>
+        <p>Change: &#8369;<span id="change">0.00</span></p>
+      </div>
+     
+
+  </body>
+    
